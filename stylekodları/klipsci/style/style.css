@@ -1,0 +1,143 @@
+body{
+    background-color: #f7f7f7 !important;
+}
+
+.navbar
+{
+    background-color: #006400   !important;
+   
+    
+}
+.haritabak:hover
+{
+    background-color: transparent !important;
+}
+
+
+.btn-navbar
+{
+    color:white !important;
+    background-color: #212529  !important;
+    border: 1px solid !important;
+}
+
+.form-control:focus
+{
+    border-color: #00127b !important;
+    /*box-shadow: 0 0 0 0.25rem #ff330040 !important;*/
+    box-shadow: none !important;
+}
+.btn:focus
+{
+    box-shadow:none !important;
+}
+.adminkategori
+{
+    background-color:#222 !important ;
+    color: white !important;
+}
+.page-link
+{
+    color: black !important;
+}
+.page-link:active
+{
+    color: red !important;
+}
+.page-link:focus
+{
+    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0.25) !important;
+}
+.list-group-item{
+    border: none !important;
+    padding: 0rem 0rem !important;
+    background-color:  transparent !important;
+    
+   
+}
+.list-group-item:hover{
+ color:#ea1b25 !important
+   
+}
+
+.kategorilerdiv
+{
+    background-color: white !important;
+}
+.ulsırala
+{
+    margin-left: -1rem !important;
+}
+hr{
+    background-color: black !important;
+}
+.dropdown-item:active
+{
+    background-color: red !important;
+}
+.dropdown-item:hover
+{
+    background-color: #ea1b25 !important;
+}
+.btn-dangerr
+{
+    background-color: #006400  !important;
+    color: white !important;
+}
+.listelediv
+{
+    background-color: white !important;
+}
+.accordion-button:focus{
+color: #000000 !important;
+box-shadow: none !important;
+}
+.accordion-button
+{
+    font-weight: 580 !important;
+}
+.accordion-button:not(.collapsed)
+{
+background-color: #961f1f00 !important;
+color: black !important;
+}
+.model-a
+{
+    color: rgb(0, 0, 0) !important;
+    font-weight:500 !important;
+}
+.model-a:active
+{
+    color:#ea1b25 !important;
+    
+}
+.accordion-body{
+    padding: 0.25rem 0.25rem !important;
+ 
+  /*  border-top: 0.2px solid rgb(192, 192, 192);*/
+}
+.card-img-top
+{
+    height:200px !important;
+    width: 100% !important;
+    object-fit: scale-down;
+    border:none !important;
+}
+.iconmodel
+{
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 0.25rem;
+    margin-right: 0.50rem;
+    object-fit: scale-down;
+    border:none !important;
+    
+
+}
+.urunresim
+{
+
+    border:none !important;
+
+
+}
