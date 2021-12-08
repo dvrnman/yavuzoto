@@ -2,6 +2,7 @@
 ob_start();
 require_once 'baglan.php';
 
+
 $markalar = [];
 
 $sorgu = $db->prepare('select  urun.marka from urun');
@@ -289,20 +290,30 @@ try {
 
                 <div class="container mb-5 mt-5  d-flex justify-content-center">
 
+                    <?php
+                    $parameters = "";
+                    foreach ($_GET as $key=>$val){
+                        if ($key!="sayfa")
+                            $parameters = $parameters."$key=$val&";
+                    }
+                    ?>
                     <nav aria-label="Page navigation example ">
                         <ul class="pagination ">
                             <?php if ($Sayfa > 1) { ?>
 
 
-                                <li class="page-item"><a class="page-link" href="index.php?sayfa=1">İlk</a></li>
+                                <li class="page-item"><a class="page-link" href="index.php?<?=$parameters?>sayfa=1">İlk</a></li>
                                 <!--1. Sayfaya gider-->
 
 
-                                <li class="page-item"><a class="page-link" href="index.php?sayfa=<?= $Sayfa -
+                                <li class="page-item"><a class="page-link" href="index.php?<?=$parameters?>sayfa=<?= $Sayfa -
                                                                                                         1 ?>">Önceki</a></li>
                                 <!--Bir Önceki Sayfaya Gitmek İçin Sayfa Değerini 1 eksiltiyoruz-->
 
                             <?php } ?>
+
+
+                        
 
                             <?php for (
                                 $i = $Sayfa - $GorunenSayfa;
@@ -317,7 +328,7 @@ try {
                                             $i .
                                             '</a></li>'; //eğer i ile sayfa değerleri aynıysa o zaman onu aktif css'si ekle
                                     } else {
-                                        echo '<li class="page-item"><a class="page-link" href="index.php?sayfa=' .
+                                        echo '<li class="page-item"><a class="page-link" href="index.php?'.$parameters.'sayfa=' .
                                             $i .
                                             '">' .
                                             $i .
@@ -327,12 +338,12 @@ try {
                             } ?>
                             <?php if ($Sayfa != $Sayfa_Sayisi) { ?>
 
-                                <li class="page-item"><a class="page-link" href="index.php?sayfa=<?= $Sayfa +
+                                <li class="page-item"><a class="page-link" href="index.php?<?=$parameters?>sayfa=<?= $Sayfa +
                                                                                                         1 ?>">İleri</a>
                                 </li>
                                 <!--Bir Sonra ki Sayfaya Gitmek için sayfa değerini 1 artırıyoruz.-->
 
-                                <li class="page-item"><a class="page-link" href="index.php?sayfa=<?= $Sayfa_Sayisi ?>">Son</a></li>
+                                <li class="page-item"><a class="page-link" href="index.php?<?=$parameters?>sayfa=<?= $Sayfa_Sayisi ?>">Son</a></li>
                                 <!--Buldugumuz Toplam Sayfa Sayısını buraya cekiyoruz tıklandıgında en son sayfaya gider-->
 
                             <?php } ?>
